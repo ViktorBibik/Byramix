@@ -17,7 +17,7 @@ public class MainClass {
     @BeforeClass
     public void setUp() {
 
-        System.setProperty("webdriver.gecko.driver","D:\\Selenium\\geckodriver-v0.10.0-win64\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","D:\\Selenium\\geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
@@ -40,6 +40,11 @@ public class MainClass {
         System.out.println(contactInformationAboutCompany.companyAdress.getText());
         System.out.println(" - Контакты: ");
         System.out.println(contactInformationAboutCompany.companyContacts.getText());
+    }
+    @Test
+    public void getCookie() throws InterruptedException {
+
+        getCookiesFireFoxBrowser.main();
     }
 
     @AfterClass
